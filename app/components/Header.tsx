@@ -170,11 +170,7 @@ export default function Header() {
           <li>
             <a
               href="#contact"
-              className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
-                activeSection === "contact"
-                  ? "bg-indigo-800 text-white"
-                  : "text-gray-700 hover:bg-indigo-800 hover:text-white"
-              }`}
+              className="flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-white transition-all duration-300 bg-indigo-800 cursor-pointer hover:text-gray-700 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 hover:bg-gray-50"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
