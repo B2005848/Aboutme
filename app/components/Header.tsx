@@ -1,9 +1,31 @@
 "use client";
 import { useLang } from "../lang-context";
 import { Image } from "@heroui/react";
+import { useEffect, useState } from "react";
 export default function Header() {
   const { lang, setLang } = useLang();
-
+  const [activeSection, setActiveSection] = useState("/");
+  const sections = ["/", "about", "exp", "projects", "skills", "contact"];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // hoặc [0.25, 0.5, 0.75]
+        rootMargin: "-20% 0px -20% 0px",
+      }
+    );
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
   return (
     <header
       data-aos="fade-down"
@@ -17,7 +39,11 @@ export default function Header() {
         <ul className="flex space-x-8 list-none">
           <li>
             <a
-              className="flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400"
+              className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
+                activeSection === "/"
+                  ? "bg-indigo-800 text-white"
+                  : "text-gray-700 hover:bg-indigo-800 hover:text-white"
+              }`}
               href="#"
             >
               <svg
@@ -39,7 +65,11 @@ export default function Header() {
           </li>
           <li>
             <a
-              className="flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400"
+              className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
+                activeSection === "about"
+                  ? "bg-indigo-800 text-white"
+                  : "text-gray-700 hover:bg-indigo-800 hover:text-white"
+              }`}
               href="#about"
             >
               <svg
@@ -61,7 +91,11 @@ export default function Header() {
           </li>
           <li>
             <a
-              className="flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400"
+              className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
+                activeSection === "exp"
+                  ? "bg-indigo-800 text-white"
+                  : "text-gray-700 hover:bg-indigo-800 hover:text-white"
+              }`}
               href="#exp"
             >
               <svg
@@ -84,7 +118,11 @@ export default function Header() {
           <li>
             <a
               href="#projects"
-              className="flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400"
+              className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
+                activeSection === "projects"
+                  ? "bg-indigo-800 text-white"
+                  : "text-gray-700 hover:bg-indigo-800 hover:text-white"
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +144,11 @@ export default function Header() {
           <li>
             <a
               href="#skills"
-              className="flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400"
+              className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
+                activeSection === "skills"
+                  ? "bg-indigo-800 text-white"
+                  : "text-gray-700 hover:bg-indigo-800 hover:text-white"
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +170,11 @@ export default function Header() {
           <li>
             <a
               href="#contact"
-              className="flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-white transition-all bg-indigo-800 cursor-pointer rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 hover:bg-gray-300/50 hover:text-indigo-800 hover:border-indigo-800"
+              className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
+                activeSection === "contact"
+                  ? "bg-indigo-800 text-white"
+                  : "text-gray-700 hover:bg-indigo-800 hover:text-white"
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
