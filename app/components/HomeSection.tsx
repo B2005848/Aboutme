@@ -242,8 +242,8 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
             data-aos-once="true"
             data-aos-duration="800"
             data-aos-easing="ease-in-out"
-            // src="imghomeme.webp"
-            src="https://images.unsplash.com/photo-1755826525115-40dc08fcd1db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
+            src="imghomeme.webp"
+            // src="https://images.unsplash.com/photo-1755826525115-40dc08fcd1db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
             isZoomed
             alt="Thanh Nam Dev Mien Tay, Thanh Nam, Lê Thanh Nam, Dev Miền Tây"
             className="object-cover w-full h-full rounded-2xl "
