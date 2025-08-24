@@ -50,7 +50,7 @@ export default function AboutSection({ lang }: { lang: "vi" | "en" }) {
           </div>
         </div>
         <div className="basis-2/3" data-aos="fade-left" data-aos-once="false">
-          <div className="flex flex-col items-center justify-center w-full px-5 py-10 leading-relaxed bg-gray-100 shadow-2xl rounded-2xl">
+          <div className="flex flex-col items-center justify-center w-full px-5 py-10 leading-relaxed bg-[#FCEBE5] shadow-2xl rounded-2xl">
             {lang === "vi" ? (
               <>
                 <h4 className="text-2xl font-semibold text-gray-700">

@@ -1,6 +1,7 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
 import { Image } from "@heroui/react";
+import Link from "next/link";
 export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
   const link = process.env.NEXT_PUBLIC_MY_LINK;
   return (
@@ -11,8 +12,10 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
       <div className="flex flex-row items-center gap-8 max-w-7xl">
         <div className="basis-2/3">
           <a
+            data-aos="fade-down-right"
+            data-aos-once="true"
             href={link}
-            className="inline-flex items-center gap-2 px-10 py-1 mb-10 text-sm text-white bg-blue-600 shadow-lg cursor-pointer shadow-blue-600/50 rounded-2xl"
+            className="inline-flex items-center gap-2 px-10 py-1 mb-10 text-sm text-white bg-blue-600 shadow-lg cursor-pointer hover:bg-blue-700 shadow-blue-600/50 rounded-2xl"
             target="_blank"
           >
             <svg
@@ -98,26 +101,32 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
 
           <div className="flex mt-5 space-x-10 text-gray-500">
             <div className="inline-flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-4"
+              <Link
+                href="https://vi.wikipedia.org/wiki/Vi%E1%BB%87t_Nam"
+                target="_blank"
+                className="inline-flex items-center gap-2 hover:text-gray-700"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-                />
-              </svg>
-              {lang === "vi" ? <>Việt Nam</> : <>Viet Nam</>}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                  />
+                </svg>
+                {lang === "vi" ? <>Việt Nam</> : <>Viet Nam</>}
+              </Link>
             </div>
             <div className="inline-flex items-center gap-2">
               <svg

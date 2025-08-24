@@ -35,7 +35,7 @@ export default function Header() {
       data-aos-easing="ease-in-out"
       className="fixed top-0 left-0 z-50 flex justify-center w-full h-16"
     >
-      <div className="flex justify-center w-2/3 mt-2 shadow-xl bg-gray-300/40 backdrop-blur-md rounded-2xl">
+      <div className="flex justify-center w-2/3 mt-2 shadow-xl bg-white/30 backdrop-blur-md rounded-2xl">
         <ul className="flex space-x-8 list-none">
           <li>
             <a

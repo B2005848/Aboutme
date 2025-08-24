@@ -1,3 +1,3 @@
-export default function Ad() {
-  return <h1>adddddđ</h1>;
+export default function AchivermentPage() {
+  return <h1>Thành tựu</h1>;
 }
