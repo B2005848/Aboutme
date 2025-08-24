@@ -13,7 +13,6 @@ body {
 }
 html {
   scroll-behavior: smooth;
-  background-color: #fcebe5;
   user-select: none; /* Ngăn bôi đen */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE10+ */

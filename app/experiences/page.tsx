@@ -35,13 +35,13 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
       </div>
       {/* Menu nhỏ để chuyển page con */}
       <div
-        className="flex items-center justify-center px-2 py-2 m-5 mt-4 shadow-2xl rounded-2xl border-1"
+        className="flex items-center justify-center px-2 py-2 m-6 shadow-2xl rounded-2xl border-1"
         data-aos="fade-up"
         data-aos-once="true"
       >
         <div className="flex justify-center basis-1/3">
           <button
-            className={`px-3 py-2  w-full rounded-2xl ${
+            className={`px-3 py-2  w-full rounded-2xl font-bold ${
               activePage === "work"
                 ? "font-bold bg-indigo-800 text-[#FCEBE5]"
                 : "text-gray-500"
@@ -54,7 +54,7 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
 
         <div className="flex justify-center basis-1/3">
           <button
-            className={`px-3 py-2 w-full rounded-2xl ${
+            className={`px-3 py-2 w-full rounded-2xl font-bold ${
               activePage === "ed"
                 ? "font-bold bg-indigo-800 text-[#FCEBE5]"
                 : "text-gray-500"
@@ -67,9 +67,9 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
 
         <div className="flex justify-center basis-1/3">
           <button
-            className={`px-3 py-2 w-full rounded-2xl ${
+            className={`px-3 py-2 w-full rounded-2xl font-bold ${
               activePage === "ach"
-                ? "font-bold bg-indigo-800 text-[#FCEBE5]"
+                ? " bg-indigo-800 text-[#FCEBE5]"
                 : "text-gray-500"
             }`}
             onClick={() => setActivePage("ach")}
@@ -80,7 +80,7 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
       </div>
 
       {/* childern */}
-      <div className="flex justify-center mt-6">
+      <div className="m-6 bg-white rounded-2xl">
         {activePage === "work" && <WorksPage />}
         {activePage === "ed" && <EducationPage />}
         {activePage === "ach" && <AchivermentPage />}

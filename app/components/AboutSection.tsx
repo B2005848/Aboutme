@@ -41,7 +41,7 @@ export default function AboutSection({ lang }: { lang: "vi" | "en" }) {
             <Image
               data-aos="fade-up"
               data-aos-once="false"
-              src="imghomeme.webp"
+              src="/img/IMG_0701.webp"
               alt="Thanh Nam Dev Mien Tay, Thanh Nam, Lê Thanh Nam, Dev Miền Tây"
               className="object-cover w-full h-full rounded-2xl "
               width={400}
@@ -50,7 +50,7 @@ export default function AboutSection({ lang }: { lang: "vi" | "en" }) {
           </div>
         </div>
         <div className="basis-2/3" data-aos="fade-left" data-aos-once="false">
-          <div className="flex flex-col items-center justify-center w-full px-5 py-10 leading-relaxed bg-[#FCEBE5] shadow-2xl rounded-2xl">
+          <div className="flex flex-col items-center justify-center w-full px-5 py-10 leading-relaxed bg-gray-100 shadow-2xl rounded-2xl">
             {lang === "vi" ? (
               <>
                 <h4 className="text-2xl font-semibold text-gray-700">
