@@ -33,9 +33,10 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
           </p>
         </div>
       </div>
+
       {/* Menu nhỏ để chuyển page con */}
       <div
-        className="flex items-center justify-center px-2 py-2 m-6 shadow-2xl rounded-2xl border-1"
+        className="flex items-center justify-center px-2 py-2 m-6 shadow-2xl shadow-blue-600 rounded-2xl border-1 border-violet-500 bg-gradient-to-r from-blue-600 to-violet-600 backdrop-blur-md"
         data-aos="fade-up"
         data-aos-once="true"
       >
@@ -43,8 +44,8 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
           <button
             className={`px-3 py-2  w-full rounded-2xl font-bold ${
               activePage === "work"
-                ? "font-bold bg-indigo-800 text-[#FCEBE5]"
-                : "text-gray-500"
+                ? "font-bold bg-gradient-to-r to-blue-700 from-violet-700  text-[#FCEBE5]"
+                : "text-gray-50"
             }`}
             onClick={() => setActivePage("work")}
           >
@@ -56,8 +57,8 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
           <button
             className={`px-3 py-2 w-full rounded-2xl font-bold ${
               activePage === "ed"
-                ? "font-bold bg-indigo-800 text-[#FCEBE5]"
-                : "text-gray-500"
+                ? "font-bold bg-gradient-to-r from-violet-500 to-blue-500  text-[#FCEBE5]"
+                : "text-gray-50"
             }`}
             onClick={() => setActivePage("ed")}
           >
@@ -67,10 +68,10 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
 
         <div className="flex justify-center basis-1/3">
           <button
-            className={`px-3 py-2 w-full rounded-2xl font-bold ${
+            className={`px-3 py-2 w-full rounded-2xl font-bold  ${
               activePage === "ach"
-                ? " bg-indigo-800 text-[#FCEBE5]"
-                : "text-gray-500"
+                ? " bg-gradient-to-r from-blue-700 to-violet-700 text-[#FCEBE5]"
+                : "text-gray-50"
             }`}
             onClick={() => setActivePage("ach")}
           >
@@ -80,10 +81,10 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
       </div>
 
       {/* childern */}
-      <div className="m-6 bg-white rounded-2xl">
-        {activePage === "work" && <WorksPage />}
-        {activePage === "ed" && <EducationPage />}
-        {activePage === "ach" && <AchivermentPage />}
+      <div className="m-6 mt-20 ">
+        {activePage === "work" && <WorksPage lang={lang} />}
+        {activePage === "ed" && <EducationPage lang={lang} />}
+        {activePage === "ach" && <AchivermentPage lang={lang} />}
       </div>
     </section>
   );
