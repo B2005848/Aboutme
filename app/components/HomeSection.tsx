@@ -149,7 +149,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
 
           {/* ---------------------VIEW PROJECTS--------------------- */}
           <div className="flex mt-5 space-x-10 text-gray-500">
-            <div className="px-10 py-2 font-bold text-white shadow-2xl bg-indigo-950 rounded-2xl shadow-indigo-800/80">
+            <div className="px-10 py-2 font-bold text-white shadow-2xl bg-indigo-950 rounded-2xl shadow-indigo-800/80 hover:bg-gray-200 hover:text-indigo-950">
               <a className="inline-flex items-center gap-2" href="#projects">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +170,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
             </div>
 
             {/* ----- LET'S WORK TOGETHER----------- */}
-            <div className="px-10 py-2 font-bold shadow-2xl text-indigo-950 border-1 rounded-2xl shadow-gray-400/80">
+            <div className="px-10 py-2 font-bold shadow-2xl text-indigo-950 border-1 rounded-2xl shadow-gray-400/80 hover:bg-gray-200 hover:text-indigo-950">
               <a className="inline-flex items-center gap-2" href={link}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
             <h4 className="flex gap-8 text-sm">
               {lang === "vi" ? <>Theo dõi tôi:</> : <>Follow me:</>}
               <ul className="flex items-center gap-8">
-                <li>
+                <li className="transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-lg">
                   <a href="https://www.facebook.com/coderNam/" target="_blank">
                     <Image
                       width={16}
@@ -215,7 +215,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
                   </a>
                 </li>
 
-                <li>
+                <li className="transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-lg">
                   <a
                     href="https://www.instagram.com/ltn181202/"
                     target="_blank"
@@ -228,7 +228,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
                   </a>
                 </li>
 
-                <li>
+                <li className="transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-lg">
                   <a href="https://www.tiktok.com/@ltnam2002" target="_blank">
                     <Image
                       width={16}

@@ -76,9 +76,9 @@ export default function WorksPage({ lang }: { lang: "vi" | "en" }) {
           </h1>
           <p>
             {lang === "vi" ? (
-              <>Mọi nơi có thể ở:</>
+              <>Mọi nơi có thể ở.</>
             ) : (
-              <>Stay Anywhere Possible</>
+              <>Stay Anywhere Possible.</>
             )}
           </p>
         </div>

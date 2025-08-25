@@ -43,7 +43,7 @@ export default function AboutSection({ lang }: { lang: "vi" | "en" }) {
               data-aos-once="false"
               src="/img/IMG_0701.webp"
               alt="Thanh Nam Dev Mien Tay, Thanh Nam, Lê Thanh Nam, Dev Miền Tây"
-              className="object-cover w-full h-full rounded-2xl "
+              className="object-cover w-full h-full shadow-2xl rounded-2xl shadow-amber-900 hover:shadow-amber-700"
               width={400}
               height={400}
             />

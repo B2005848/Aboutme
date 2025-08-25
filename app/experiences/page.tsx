@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AchivermentPage from "./achiverment/page";
+import ActivitiesPage from "./Activities/page";
 import WorksPage from "./work/page";
 import EducationPage from "./education/page";
 export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
@@ -84,7 +84,7 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
       <div className="m-6 mt-20 ">
         {activePage === "work" && <WorksPage lang={lang} />}
         {activePage === "ed" && <EducationPage lang={lang} />}
-        {activePage === "ach" && <AchivermentPage lang={lang} />}
+        {activePage === "ach" && <ActivitiesPage lang={lang} />}
       </div>
     </section>
   );
