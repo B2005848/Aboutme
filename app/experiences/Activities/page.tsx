@@ -2,7 +2,10 @@ export default function ActivitiesPage({ lang }: { lang: "vi" | "en" }) {
   return (
     <div className="h-full py-10 bg-gray-100 shadow-lg rounded-2xl">
       <div className="flex justify-center">
-        <table className="w-2/3 text-sm text-left text-gray-500 rtl:text-right dark:text-gray-400">
+        <table
+          data-aos="fade-up"
+          className="w-2/3 text-sm text-left text-gray-500 rtl:text-right dark:text-gray-400"
+        >
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="px-6 py-3">
