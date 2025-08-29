@@ -171,7 +171,12 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
 
             {/* ----- LET'S WORK TOGETHER----------- */}
             <div className="px-10 py-2 font-bold shadow-2xl text-indigo-950 border-1 rounded-2xl shadow-gray-400/80 hover:bg-gray-200 hover:text-indigo-950">
-              <a className="inline-flex items-center gap-2" href={link}>
+              <a
+                className="inline-flex items-center gap-2"
+                href={link}
+                target="_blank"
+                title="Go to my facebook"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
