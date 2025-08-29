@@ -15,7 +15,8 @@ export default function ProjectsSection({ lang }: { lang: "vi" | "en" }) {
             {lang === "vi" ? <>Xem thêm...</> : <>See more...</>}
           </a>
         </p>
-        <div className="grid w-3/4 grid-cols-2 grid-rows-4 gap-10 mx-auto text-gray-50">
+        <div className="grid w-3/4 grid-cols-1 gap-10 mx-auto md:grid-cols-2 text-gray-50">
+          {" "}
           {/* project 1 */}
           <div
             className="px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:-translate-x-1.5 hover:transition-all duration-300 ease-in"
@@ -47,7 +48,6 @@ export default function ProjectsSection({ lang }: { lang: "vi" | "en" }) {
               </span>
             </div>
           </div>
-
           {/* project 1 */}
           <div
             className="px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:translate-x-1.5 hover:transition-all duration-300 ease-in"
@@ -76,7 +76,6 @@ export default function ProjectsSection({ lang }: { lang: "vi" | "en" }) {
               </span>
             </div>
           </div>
-
           {/* project 1 */}
           <div
             className="px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:-translate-x-1.5 hover:transition-all duration-300 ease-in"
@@ -121,7 +120,6 @@ export default function ProjectsSection({ lang }: { lang: "vi" | "en" }) {
               </span>
             </div>
           </div>
-
           {/* project 1 */}
           <div
             className="px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:translate-x-1.5 hover:transition-all duration-300 ease-in"
