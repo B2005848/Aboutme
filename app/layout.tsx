@@ -22,6 +22,7 @@ export const metadata = {
     siteName: "Thanh Nam Portfolio",
     images: [
       {
+        url: "/img/IMG_0701.webp", // 👈 add the image URL here
         width: 1200,
         height: 630,
         alt: "Thanh Nam Portfolio",
