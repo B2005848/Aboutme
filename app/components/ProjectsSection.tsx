@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@heroui/react";
 const projects = [
   {
     title: {
@@ -112,13 +113,13 @@ export default function ProjectsSection({ lang }: { lang: "vi" | "en" }) {
         </h1>
 
         <p className="mb-10 text-center text-indigo-400 hover:text-indigo-300 animate-[bounce_2s] ">
-          <a
+          <Link
             href="https://github.com/B2005848"
             target="_blank"
             rel="noopener noreferrer"
           >
             {lang === "vi" ? <>Xem thêm...</> : <>See more...</>}
-          </a>
+          </Link>
         </p>
         <div className="grid w-3/4 grid-cols-1 gap-10 mx-auto md:grid-cols-2 text-gray-50">
           {projects.map((project, idx) => (
@@ -159,13 +160,13 @@ export default function ProjectsSection({ lang }: { lang: "vi" | "en" }) {
                     {project.linkLabel?.[lang]}
                   </h1>
                   <span className="italic">
-                    <a
+                    <Link
                       className="text-amber-50 hover:text-blue-100"
                       href={project.link}
                       target="_blank"
                     >
                       {project.link}
-                    </a>
+                    </Link>
                   </span>
                 </div>
               )}

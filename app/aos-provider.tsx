@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, ReactNode } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export function AOSProvider() {
+export function AOSProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     AOS.init({
       duration: 800, // thời gian chạy animation
@@ -28,5 +28,5 @@ export function AOSProvider() {
     });
   }, []);
 
-  return null; // không render gì cả, chỉ chạy init
+  return <>{children}</>; // không render gì cả, chỉ chạy init
 }

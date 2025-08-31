@@ -12,7 +12,24 @@ const BeVNPro = Be_Vietnam_Pro({
 
 export const metadata = {
   title: "Thanh Nam - Dev Miền Tây",
-  description: "Là 1 dev miền Tây, với niềm học hỏi mãnh liệt ",
+  description: "Là 1 dev miền Tây, với niềm học hỏi mãnh liệt",
+  icons: {
+    icon: "/5.svg",
+  },
+  openGraph: {
+    title: "Thanh Nam - Dev Miền Tây",
+    description: "Là 1 dev miền Tây, với niềm học hỏi mãnh liệt",
+    siteName: "Thanh Nam Portfolio",
+    images: [
+      {
+        width: 1200,
+        height: 630,
+        alt: "Thanh Nam Portfolio",
+      },
+    ],
+    locale: "vi_VN",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -39,8 +56,10 @@ export default function RootLayout({
         <LangProvider>
           <Providers>
             <Header />
-            <AOSProvider /> {/* 👈 Khởi tạo AOS ở đây */}
-            <main className="min-h-screen mt-[100px]">{children}</main>
+            <AOSProvider>
+              {/* 👈 Khởi tạo AOS ở đây */}
+              <main className="min-h-screen mt-[100px]">{children}</main>
+            </AOSProvider>
             <Footer />
           </Providers>
         </LangProvider>

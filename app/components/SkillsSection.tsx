@@ -1,4 +1,5 @@
 "use client";
+import { Image } from "@heroui/react";
 const translations = {
   en: {
     title: "My skills",
@@ -111,24 +112,24 @@ export default function SkillsSection({ lang }: { lang: "vi" | "en" }) {
       <div className="mt-20">
         <p className="mb-6 text-center">{t.aboutTech}</p>
 
-        <div className="w-2/3 mx-auto overflow-hidden whitespace-nowrap rounded-2xl">
-          <div className="inline-block animate-marquee">
-            {icons.map((icon, idx) => (
-              <img
+        <div className="w-2/3 mx-auto overflow-hidden rounded-2xl">
+          <div className="flex animate-marquee">
+            {icons.concat(icons).map((icon, idx) => (
+              <Image
                 key={idx}
                 src={`https://skillicons.dev/icons?i=${icon}`}
                 alt={icon}
-                className="inline-block w-12 h-12 mx-6"
+                className="flex-shrink-0 w-12 h-12 mx-6"
               />
             ))}
 
             {/* nhân đôi để chạy mượt liên tục */}
             {icons.map((icon, idx) => (
-              <img
+              <Image
                 key={`dup-${idx}`}
                 src={`https://skillicons.dev/icons?i=${icon}`}
                 alt={icon}
-                className="inline-block w-12 h-12 mx-6"
+                className="flex-shrink-0 w-12 h-12 mx-6"
               />
             ))}
           </div>
@@ -145,8 +146,9 @@ export default function SkillsSection({ lang }: { lang: "vi" | "en" }) {
           }
         }
         .animate-marquee {
-          display: inline-block;
-          animation: marquee 10s linear infinite;
+          display: flex;
+          width: max-content;
+          animation: marquee 20s linear infinite;
         }
       `}</style>
     </section>

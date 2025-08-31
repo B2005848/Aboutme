@@ -1,6 +1,6 @@
 "use client";
 import { useLang } from "../lang-context";
-import { Image } from "@heroui/react";
+import { Image, Link } from "@heroui/react";
 import { useEffect, useState } from "react";
 export default function Header() {
   const { lang, setLang } = useLang();
@@ -38,7 +38,7 @@ export default function Header() {
       <div className="flex justify-center w-2/3 mt-2 shadow-xl bg-gray-300/40 backdrop-blur-md rounded-2xl">
         <ul className="flex space-x-8 list-none">
           <li>
-            <a
+            <Link
               className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
                 activeSection === "/"
                   ? "bg-indigo-800 text-white"
@@ -61,10 +61,10 @@ export default function Header() {
                 />
               </svg>
               {lang === "vi" ? <>Trang Chủ</> : <>Home</>}
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
                 activeSection === "about"
                   ? "bg-indigo-800 text-white"
@@ -87,10 +87,10 @@ export default function Header() {
                 />
               </svg>
               {lang === "vi" ? <>Về Tôi</> : <>About</>}
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
                 activeSection === "exp"
                   ? "bg-indigo-800 text-white"
@@ -113,10 +113,10 @@ export default function Header() {
                 />
               </svg>
               {lang === "vi" ? <>Kinh Nghiệm</> : <>Experience</>}
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#projects"
               className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
                 activeSection === "projects"
@@ -139,10 +139,10 @@ export default function Header() {
                 />
               </svg>
               {lang === "vi" ? <>Dự Án</> : <>Projects</>}
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#skills"
               className={`flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-gray-700 transition-all duration-300 cursor-pointer hover:text-white hover:bg-indigo-800 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 ${
                 activeSection === "skills"
@@ -165,10 +165,10 @@ export default function Header() {
                 />
               </svg>
               {lang === "vi" ? <>Kỹ Năng</> : <>Skills</>}
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#contact"
               className="flex items-center gap-2 p-2 pl-5 pr-5 m-3 text-sm text-white transition-all duration-300 bg-indigo-800 cursor-pointer hover:text-gray-700 rounded-2xl hover:shadow-xl/30 hover:shadow-gray-400 hover:bg-gray-50"
             >
@@ -187,7 +187,7 @@ export default function Header() {
                 />
               </svg>
               {lang === "vi" ? <>Liên Hệ</> : <>Contact</>}
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
