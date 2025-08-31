@@ -32,7 +32,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
-        <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
+        <link rel="shortcut icon" href="5.svg" type="image/x-icon" />
       </head>
 
       <body className={`${BeVNPro.className} pt-16`}>
