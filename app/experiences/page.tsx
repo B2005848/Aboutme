@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import ActivitiesPage from "./Activities/page";
-import WorksPage from "./work/page";
-import EducationPage from "./education/page";
+import ActivitiesPage from "../components/experience/ActivitiesPage";
+import WorksPage from "../components/experience/WorkPage";
+import EducationPage from "../components/experience/EducationPage";
 export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
   const [activePage, setActivePage] = useState<"work" | "ed" | "ach">("work");
   return (
@@ -26,9 +26,10 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
               </>
             ) : (
               <>
-                "With over 2 years of experience in web development, I have
-                worked on various projects that focus on building responsive,
-                user-friendly, and visually appealing applications."
+                &quot; With over 2 years of experience in web development, I
+                have worked on various projects that focus on building
+                responsive, user-friendly, and visually appealing applications.
+                &rdquo
               </>
             )}
           </p>

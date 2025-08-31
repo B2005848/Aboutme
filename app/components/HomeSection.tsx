@@ -93,7 +93,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
                 I'm a web developer with a passion for creating beautiful and
                 functional websites. I enjoy working with frameworks to build
                 responsive and user-friendly applications with 2+ years of
-                experience in web development.{" "}
+                experience in web development.
               </>
             )}
           </p>
