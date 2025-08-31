@@ -1,3 +1,107 @@
+const projects = [
+  {
+    title: {
+      vi: "Hệ Thống Quản Lí Phòng Khám",
+      en: "Clinic Management System",
+    },
+    time: {
+      vi: "3 tháng.",
+      en: "3 months.",
+    },
+    descLabel: {
+      vi: "Chức năng:",
+      en: "Features:",
+    },
+    desc: {
+      vi: "Quản lí bệnh nhân, quản lí nhân viên, quản lí lịch hẹn, thống kê doanh thu, thanh toán online, trò chuyện...",
+      en: "Manage patients, staff, appointments, revenue statistics, online payment, chat...",
+    },
+    techLabel: {
+      vi: "Công nghệ:",
+      en: "Technologies:",
+    },
+    tech: "VueJS, NodeJS, ExpressJS, React Native, Sql Server, SocketIO, VNPAY demo...",
+  },
+  {
+    title: {
+      vi: "Website Quản Lí Hoa Tiêu",
+      en: "Pilot Management Website",
+    },
+    time: {
+      vi: "2 tháng.",
+      en: "2 months.",
+    },
+    descLabel: {
+      vi: "Chức năng:",
+      en: "Features:",
+    },
+    desc: {
+      vi: "Quản lí nhân viên, Quản lí ca làm việc, Thống kê số lượt đi, Xuất file excel, Quản lí tàu, Quản lí cầu cảng.",
+      en: "Manage staff, shifts, trip statistics, export excel, manage ships, manage ports.",
+    },
+    techLabel: {
+      vi: "Công nghệ:",
+      en: "Technologies:",
+    },
+    tech: "VueJS, NodeJS, ExpressJS, MongoDB...",
+  },
+  {
+    title: {
+      vi: "Landing Page về Dịch Vụ Bốc Xếp",
+      en: "Landing Page for Loading Services",
+    },
+    publicLabel: {
+      vi: "Đã công khai",
+      en: "Public",
+    },
+    time: {
+      vi: "2 ngày.",
+      en: "2 days.",
+    },
+    descLabel: {
+      vi: "Mô tả:",
+      en: "Description:",
+    },
+    desc: {
+      vi: "Quảng bá về dịch vụ bốc xếp, vận chuyển hàng hóa, dọn dẹp kho xưởng, phun thuốc diệt côn trùng...",
+      en: "Promote loading, cargo transport, warehouse cleaning, pest control services...",
+    },
+    techLabel: {
+      vi: "Công nghệ:",
+      en: "Technologies:",
+    },
+    tech: "NextJS, TailwindCSS, HeroUI, AOS Animation...",
+    linkLabel: {
+      vi: "Link website:",
+      en: "Website link:",
+    },
+    link: "https://thienphuocbocxep.id.vn/",
+  },
+  {
+    title: {
+      vi: "Landing Page về Bất Động Sản",
+      en: "Landing Page for Real Estate",
+    },
+    time: {
+      vi: "2 ngày.",
+      en: "2 days.",
+    },
+    descLabel: {
+      vi: "Mô tả:",
+      en: "Description:",
+    },
+    desc: {
+      vi: "Quảng bá thương hiệu, cung cấp hình ảnh chung cư, thông tin ...",
+      en: "Brand promotion, provide apartment images, information ...",
+    },
+    techLabel: {
+      vi: "Công nghệ:",
+      en: "Technologies:",
+    },
+    tech: "NextJS, TailwindCSS, HeroUI, AOS Animation...",
+  },
+];
+
 export default function ProjectsSection({ lang }: { lang: "vi" | "en" }) {
   return (
     <section id="projects" className="mt-44">
@@ -16,137 +120,56 @@ export default function ProjectsSection({ lang }: { lang: "vi" | "en" }) {
           </a>
         </p>
         <div className="grid w-3/4 grid-cols-1 gap-10 mx-auto md:grid-cols-2 text-gray-50">
-          {" "}
-          {/* project 1 */}
-          <div
-            className="px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:-translate-x-1.5 hover:transition-all duration-300 ease-in"
-            data-aos="flip-left"
-            data-aos-offset="200"
-            data-aos-duration="1000"
-          >
-            <div className="flex gap-2">
-              <h1 className="text-2xl font-bold">
-                Hệ Thống Quản Lí Phòng Khám
-              </h1>
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className={`px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:${
+                idx % 2 === 0 ? "-translate-x-1.5" : "translate-x-1.5"
+              } hover:transition-all duration-300 ease-in`}
+              data-aos={idx % 2 === 0 ? "flip-left" : "flip-right"}
+              data-aos-offset="200"
+              data-aos-duration="1000"
+            >
+              <div className="flex gap-2">
+                <h1 className="text-2xl font-bold">{project.title[lang]}</h1>
+                {"publicLabel" in project && (
+                  <span className="inline-flex items-center">
+                    {project.publicLabel?.[lang]}
+                  </span>
+                )}
+              </div>
+              <div className="flex gap-2">
+                <h1 className="font-bold">
+                  {lang === "vi" ? "Thời gian: " : "Time: "}
+                </h1>
+                <span>{project.time[lang]}</span>
+              </div>
+              <div>
+                <h1 className="font-bold">{project.descLabel[lang]}</h1>
+                <p>{project.desc[lang]}</p>
+              </div>
+              <div className="flex gap-2 ">
+                <h1 className="italic font-bold">{project.techLabel[lang]}</h1>
+                <span className="italic">{project.tech}</span>
+              </div>
+              {"link" in project && (
+                <div className="flex gap-2 ">
+                  <h1 className="italic font-bold">
+                    {project.linkLabel?.[lang]}
+                  </h1>
+                  <span className="italic">
+                    <a
+                      className="text-amber-50 hover:text-blue-100"
+                      href={project.link}
+                      target="_blank"
+                    >
+                      {project.link}
+                    </a>
+                  </span>
+                </div>
+              )}
             </div>
-            <div className="flex gap-2">
-              <h1 className="font-bold">Thời gian: </h1>
-              <span>3 tháng.</span>
-            </div>
-            <div>
-              <h1 className="font-bold">Chức năng:</h1>
-              <p>
-                Quản lí bệnh nhân, quản lí nhân viên, quản lí lịch hẹn, thống kê
-                doanh thu, thanh toán online, trò chuyện...
-              </p>
-            </div>
-            <div className="flex gap-2 ">
-              <h1 className="italic font-bold">Công nghệ: </h1>
-              <span className="italic">
-                VueJS, NodeJS, ExpressJS, React Native, Sql Server, <br />
-                SocketIO, VNPAY demo...
-              </span>
-            </div>
-          </div>
-          {/* project 1 */}
-          <div
-            className="px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:translate-x-1.5 hover:transition-all duration-300 ease-in"
-            data-aos="flip-right"
-            data-aos-offset="200"
-            data-aos-duration="1000"
-          >
-            <div className="flex gap-2">
-              <h1 className="text-2xl font-bold">Website Quản Lí Hoa Tiêu</h1>
-            </div>
-            <div className="flex gap-2">
-              <h1 className="font-bold">Thời gian: </h1>
-              <span>2 tháng.</span>
-            </div>
-            <div>
-              <h1 className="font-bold">Chức năng:</h1>
-              <p>
-                Quản lí nhân viên, Quản lí ca làm việc, Thống kê số lượt đi,
-                Xuất file excel, Quản lí tàu, Quản lí cầu cảng.
-              </p>
-            </div>
-            <div className="flex gap-2 ">
-              <h1 className="italic font-bold">Công nghệ: </h1>
-              <span className="italic">
-                VueJS, NodeJS, ExpressJS, MongoDB...
-              </span>
-            </div>
-          </div>
-          {/* project 1 */}
-          <div
-            className="px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:-translate-x-1.5 hover:transition-all duration-300 ease-in"
-            data-aos="flip-left"
-            data-aos-offset="200"
-            data-aos-duration="1000"
-          >
-            <div className="flex gap-2">
-              <h1 className="text-2xl font-bold">
-                Landing Page về Dịch Vụ Bốc Xếp
-              </h1>
-              <span className="inline-flex items-center">Đã công khai</span>
-            </div>
-            <div className="flex gap-2">
-              <h1 className="font-bold">Thời gian: </h1>
-              <span>2 ngày.</span>
-            </div>
-            <div>
-              <h1 className="font-bold">Mô tả:</h1>
-              <p>
-                Quảng bá về dịch vụ bốc xếp, vận chuyển hàng hóa, dọn dẹp kho
-                xưởng, phun thuốc diệt côn trùng...
-              </p>
-            </div>
-            <div className="flex gap-2 ">
-              <h1 className="italic font-bold">Công nghệ: </h1>
-              <span className="italic">
-                NextJS, TailwindCSS, HeroUI, AOS Animation...
-              </span>
-            </div>
-
-            <div className="flex gap-2 ">
-              <h1 className="italic font-bold">Link website: </h1>
-              <span className="italic">
-                <a
-                  className="text-amber-50 hover:text-blue-100"
-                  href="https://thienphuocbocxep.id.vn/"
-                  target="_blank"
-                >
-                  https://thienphuocbocxep.id.vn/
-                </a>
-              </span>
-            </div>
-          </div>
-          {/* project 1 */}
-          <div
-            className="px-5 py-5 bg-[#3664F4] shadow-2xl rounded-2xl hover:translate-x-1.5 hover:transition-all duration-300 ease-in"
-            data-aos="flip-right"
-          >
-            <div className="flex gap-2">
-              <h1 className="text-2xl font-bold">
-                Landing Page về Bất Động Sản
-              </h1>
-            </div>
-            <div className="flex gap-2">
-              <h1 className="font-bold">Thời gian: </h1>
-              <span>2 ngày.</span>
-            </div>
-            <div>
-              <h1 className="font-bold">Mô tả:</h1>
-              <p>
-                Quảng bá thương hiệu, cung cấp hình ảnh chung cư, thông tin ...
-              </p>
-            </div>
-            <div className="flex gap-2 ">
-              <h1 className="italic font-bold">Công nghệ: </h1>
-              <span className="italic">
-                NextJS, TailwindCSS, HeroUI, AOS Animation...
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

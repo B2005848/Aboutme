@@ -13,7 +13,4 @@ body {
 }
 html {
   scroll-behavior: smooth;
-  user-select: none; /* Ngăn bôi đen */
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE10+ */
 }

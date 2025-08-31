@@ -40,7 +40,7 @@ export default function RootLayout({
           <Providers>
             <Header />
             <AOSProvider /> {/* 👈 Khởi tạo AOS ở đây */}
-            <main className="min-h-screen mt-[100px]">{children}</main>{" "}
+            <main className="min-h-screen mt-[100px]">{children}</main>
             <Footer />
           </Providers>
         </LangProvider>

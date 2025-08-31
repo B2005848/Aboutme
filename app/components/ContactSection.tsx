@@ -1,7 +1,28 @@
 export default function ContactSection({ lang }: { lang: "vi" | "en" }) {
   return (
     <section id="contact">
-      <div className="mt-44">This is Contact</div>
+      <div className="flex justify-center mt-44 ">
+        <a
+          className="inline-flex gap-2 text-red-400 transition-all duration-300 hover:-translate-y-2 hover:text-blue-500"
+          href="#about"
+        >
+          Click here to get in touch me
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
+            />
+          </svg>
+        </a>
+      </div>
     </section>
   );
 }
