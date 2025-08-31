@@ -1,3 +1,4 @@
+"use client";
 export default function ActivitiesPage({ lang }: { lang: "vi" | "en" }) {
   return (
     <div className="h-full py-10 bg-gray-100 shadow-lg rounded-2xl">

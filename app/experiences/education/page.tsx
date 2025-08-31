@@ -1,3 +1,4 @@
+"use client";
 export default function EducationPage({ lang }: { lang: "vi" | "en" }) {
   const timeline = [
     {

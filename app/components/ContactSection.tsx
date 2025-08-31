@@ -1,3 +1,4 @@
+"use client";
 export default function ContactSection({ lang }: { lang: "vi" | "en" }) {
   return (
     <section id="contact">
