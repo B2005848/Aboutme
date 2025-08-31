@@ -14,7 +14,7 @@ export const metadata = {
   title: "Thanh Nam - Dev Miền Tây",
   description: "Là 1 dev miền Tây, với niềm học hỏi mãnh liệt",
   icons: {
-    icon: "/5.svg",
+    icon: "https://aboutme-taupe-nine.vercel.app/5.svg",
   },
   openGraph: {
     title: "Thanh Nam - Dev Miền Tây",
@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Thanh Nam Portfolio",
     images: [
       {
-        url: "https://aboutme-taupe-nine.vercel.app/#img/IMG_0701.webp", // 👈 add the image URL here
+        url: "https://aboutme-taupe-nine.vercel.app/logoandtextngang.png", // 👈 add the image URL here
         width: 1200,
         height: 630,
         alt: "Thanh Nam Portfolio",
