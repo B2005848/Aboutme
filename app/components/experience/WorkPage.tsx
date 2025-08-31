@@ -1,5 +1,8 @@
 "use client";
-export default function WorksPage({ lang }: { lang: "vi" | "en" }) {
+import { useLang } from "@/app/lang-context";
+
+export default function WorksPage() {
+  const { lang } = useLang();
   return (
     <div className="flex flex-row items-center justify-center py-10 space-x-10 bg-gray-100 shadow-lg h-80 rounded-2xl">
       <div className="flex flex-col space-y-5 ">

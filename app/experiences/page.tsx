@@ -20,16 +20,17 @@ export default function ExperienceSection({ lang }: { lang: "vi" | "en" }) {
           <p className="mt-3 italic text-gray-500">
             {lang === "vi" ? (
               <>
-                "Với hơn 2 năm kinh nghiệm trong lĩnh vực phát triển web, tôi đã
-                tham gia nhiều dự án tập trung vào việc xây dựng các ứng dụng
-                đáp ứng tốt, thân thiện với người dùng và có giao diện hấp dẫn."
+                &quot;Với hơn 2 năm kinh nghiệm trong lĩnh vực phát triển web,
+                tôi đã tham gia nhiều dự án tập trung vào việc xây dựng các ứng
+                dụng đáp ứng tốt, thân thiện với người dùng và có giao diện hấp
+                dẫn.&quot;
               </>
             ) : (
               <>
                 &quot; With over 2 years of experience in web development, I
                 have worked on various projects that focus on building
                 responsive, user-friendly, and visually appealing applications.
-                &rdquo
+                &quot;
               </>
             )}
           </p>

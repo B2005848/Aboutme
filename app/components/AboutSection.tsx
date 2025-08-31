@@ -22,12 +22,13 @@ export default function AboutSection({ lang }: { lang: "vi" | "en" }) {
           >
             {lang === "vi" ? (
               <>
-                "Nhấn mạnh việc thiết kế UI “sạch” và đơn giản, nghe tự nhiên và
-                chuyên nghiệp."
+                &quot;Nhấn mạnh việc thiết kế UI “sạch” và đơn giản, nghe tự
+                nhiên và chuyên nghiệp. &quot;
               </>
             ) : (
               <>
-                "Passionate about designing clean and simple user interfaces."
+                &quot;ate about designing clean and simple user interfaces.
+                &quot;
               </>
             )}
           </p>

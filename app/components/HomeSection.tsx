@@ -47,7 +47,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
               </>
             ) : (
               <>
-                Hi, I'm Le Thanh Nam {"<"}Dev Mien Tay{">"}
+                Hi, I&lsquo;m Le Thanh Nam {"<"}Dev Mien Tay{">"}
               </>
             )}
           </h1>
@@ -90,9 +90,9 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
               </>
             ) : (
               <>
-                I'm a web developer with a passion for creating beautiful and
-                functional websites. I enjoy working with frameworks to build
-                responsive and user-friendly applications with 2+ years of
+                I&lsquo;m a web developer with a passion for creating beautiful
+                and functional websites. I enjoy working with frameworks to
+                build responsive and user-friendly applications with 2+ years of
                 experience in web development.
               </>
             )}
@@ -201,7 +201,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
                 {lang === "vi" ? (
                   <>Làm việc cùng nhau nào!</>
                 ) : (
-                  <>Let's Work Together!</>
+                  <>Let&lsquo;s Work Together!</>
                 )}
               </Link>
             </div>

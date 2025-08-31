@@ -1,5 +1,9 @@
 "use client";
-export default function EducationPage({ lang }: { lang: "vi" | "en" }) {
+import { useLang } from "@/app/lang-context";
+
+export default function EducationPage() {
+  const { lang } = useLang();
+
   const timeline = [
     {
       year: "2017 - 2020",

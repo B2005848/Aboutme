@@ -1,5 +1,7 @@
 "use client";
-export default function ActivitiesPage({ lang }: { lang: "vi" | "en" }) {
+import { useLang } from "@/app/lang-context";
+export default function ActivitiesPage() {
+  const { lang } = useLang();
   return (
     <div className="h-full py-10 bg-gray-100 shadow-lg rounded-2xl">
       <div className="flex justify-center">

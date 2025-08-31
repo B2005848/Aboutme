@@ -2,10 +2,10 @@
 import { useLang } from "../lang-context";
 import { Image, Link } from "@heroui/react";
 import { useEffect, useState } from "react";
+const sections = ["/", "about", "exp", "projects", "skills", "contact"];
 export default function Header() {
   const { lang, setLang } = useLang();
   const [activeSection, setActiveSection] = useState("/");
-  const sections = ["/", "about", "exp", "projects", "skills", "contact"];
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
