@@ -175,7 +175,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
             <div className="px-10 py-2 font-bold shadow-2xl text-indigo-950 border-1 rounded-2xl shadow-gray-400/80 hover:bg-gray-200 hover:text-indigo-950">
               <Link
                 className="inline-flex items-center gap-2 text-indigo-950"
-                href={link}
+                href="https://www.facebook.com/coderNam/"
                 target="_blank"
                 title="Go to my facebook"
               >
