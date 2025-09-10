@@ -8,7 +8,7 @@ export default function HomeSection({ lang }: { lang: "vi" | "en" }) {
       className="flex items-center justify-center w-full px-6 py-12"
       id="/"
     >
-      <div className="flex flex-row items-center gap-8 max-w-7xl">
+      <div className="flex flex-col items-center gap-8 md:flex-row max-w-7xl">
         <div className="basis-2/3">
           <Link
             data-aos="fade-down-right"

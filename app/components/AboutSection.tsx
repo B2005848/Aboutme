@@ -37,7 +37,7 @@ export default function AboutSection({ lang }: { lang: "vi" | "en" }) {
 
       {/* content */}
       <div className="flex w-full mt-5 space-x-5">
-        <div className="basis-1/3">
+        <div className="md:basis-1/3">
           <div className="flex justify-center">
             <Image
               data-aos="fade-up"
@@ -50,7 +50,11 @@ export default function AboutSection({ lang }: { lang: "vi" | "en" }) {
             />
           </div>
         </div>
-        <div className="basis-2/3" data-aos="fade-left" data-aos-once="false">
+        <div
+          className="md:basis-2/3"
+          data-aos="fade-left"
+          data-aos-once="false"
+        >
           <div className="flex flex-col items-center justify-center w-full px-5 py-10 leading-relaxed bg-gray-100 shadow-2xl rounded-2xl">
             {lang === "vi" ? (
               <>
