@@ -36,8 +36,8 @@ export default function AboutSection({ lang }: { lang: "vi" | "en" }) {
       </div>
 
       {/* content */}
-      <div className="flex w-full mt-5 space-x-5">
-        <div className="md:basis-1/3">
+      <div className="md:flex md:w-full md:mt-5 md:space-x-5">
+        <div className="basis-1/3">
           <div className="flex justify-center">
             <Image
               data-aos="fade-up"
